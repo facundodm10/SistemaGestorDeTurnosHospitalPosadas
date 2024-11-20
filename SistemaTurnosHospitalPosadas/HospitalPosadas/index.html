@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="styles/indexStyle.css">
+  <title>LOGIN</title>
+</head>
+
+<body>
+<header class="w3-container custom-header">
+  <img src="./images/isologotipo.png" alt="Isologotipo">
+  <h1 class="w3-text-white">Hospital Nacional Profesor Alejandro Posadas</h1>
+</header>
+
+<!-- Contenedor centrado para el formulario -->
+<div class="form-container">
+  <div class="form-wrapper">
+    <form class="w3-container w3-card-4 color-form" name="login" method="post" action="view/main.html">
+
+      <p>
+        <label>Número de DNI</label>
+        <input class="w3-input" type="text" style="width:90%" required placeholder="Ingrese su DNI">
+      </p>
+      <p>
+        <label>Contrasena</label>
+        <input class="w3-input" type="password" style="width:90%" required placeholder="Ingrese su contraseña">
+      </p>
+
+      <p>
+        <input id="milk" class="w3-check" type="checkbox" checked="checked">
+        <label>Mantener mi Sesion iniciada</label>
+      </p>
+
+      <div class="button-container">
+        <p>
+          <button class="w3-btn color-button">Iniciar Sesion</button>
+        </p>
+        <p>
+          <button class="w3-btn color-button"> <a href="view/registerView.html"> Registrarse</a></button>
+        </p>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- Pie de página -->
+<footer>
+  <p>&copy; 2024 Hospital Nacional Profesor Alejandro Posadas. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

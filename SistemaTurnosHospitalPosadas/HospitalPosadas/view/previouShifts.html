@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Próximos Turnos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/reserveStyle.css">
+    <style>
+        /* Estilos generales */
+        html, body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif}
+        body { background-color: #ddd; }
+        .w3-teall { background-color: #154564; }
+        .w3-tealll { background-color: #154564; }
+        .w3-bar-item:hover { background-color: #0d3450; }
+        .right-container { background-color: white; }
+        .left-container { background-color: white; }
+
+        /* Estilo de la tabla */
+        .turnos-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+        .turnos-table th, .turnos-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #365a98; /* Borde visible */
+            background-color: #fff;
+        }
+        .turnos-table th {
+            background-color: #154564;
+            color: white;
+        }
+        .turnos-table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alterna colores en las filas */
+        }
+        .turnos-table tr:hover {
+            background-color: #f1f1f1; /* Resalta la fila al pasar el mouse */
+        }
+        .action-btn {
+            background-color: #154564;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .action-btn:hover {
+            background-color: #0d3450;
+        }
+        .turnos-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .turnos-table th, .turnos-table td {
+            padding: 12px;
+            border: 1px solid #365a98; /* Borde visible */
+        }
+
+        .turnos-table th {
+            background-color: #154564;
+            color: white;
+            font-weight: bold;
+        }
+
+        .turnos-table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Colores alternados */
+        }
+
+        .turnos-table tr:hover {
+            background-color: #ddd; /* Resaltar fila al pasar el mouse */
+        }
+
+    </style>
+</head>
+
+<body class="w3-light-grey">
+
+<header class="w3-container w3-tealll w3-padding-small">
+    <div class="w3-half">
+        <img src="../images/isologotipo.png" alt="Isologotipo">
+        <h1 class="w3-text-white">Hospital Nacional Profesor Alejandro Posadas</h1>
+    </div>
+    <div class="w3-half">
+        <p class="w3-text-white">
+            <i class="fa fa-user w3-margin-right"></i>Nadal, Franco
+        </p>
+    </div>
+</header>
+
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+        <!-- Left Column with Vertical Navigation Bar -->
+        <div class="w3-third">
+            <div class="w3-white w3-text-black w3-card-4 left-container">
+                <div class="w3-bar-block">
+                    <a href="#home" class="w3-bar-item w3-button">
+                        <i class="fa fa-calendar-plus-o fa-fw w3-margin-right"></i> Reservar Turnos
+                    </a>
+                    <a href="#about" class="w3-bar-item w3-button">
+                        <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Próximos Turnos
+                    </a>
+                    <a href="#services" class="w3-bar-item w3-button w3-teall">
+                        <i class="fa fa-history fa-fw w3-margin-right"></i> Turnos Anteriores
+                    </a>
+                    <a href="#portfolio" class="w3-bar-item w3-button">
+                        <i class="fa fa-calendar-times-o fa-fw w3-margin-right"></i> Cancelar Turno
+                    </a>
+                </div>
+            </div><br>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+            <div class="w3-container w3-text-black w3-card w3-margin-bottom right-container">
+                <h2 class="w3-text-black w3-padding-16">
+                    <i class="fa fa-history fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>
+                    Turnos Anteriores
+                </h2>
+
+                <table class="turnos-table">
+                    <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Especialista</th>
+                        <th>Especialidad</th>
+                        <th>Fecha</th>
+                        <th>Notas de Consulta</th>
+                        <th>Medicamentos Sugeridos</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Franco Nadal</td>
+                        <td>Dra. Ana López</td>
+                        <td>Dermatología</td>
+                        <td>15/10/2024</td>
+                        <td>Tratamiento para piel seca y alergias.</td>
+                        <td>Crema hidratante, antihistamínicos orales.</td>
+                    </tr>
+                    <tr>
+                        <td>Franco Nadal</td>
+                        <td>Dr. Carlos García</td>
+                        <td>Neurología</td>
+                        <td>20/09/2024</td>
+                        <td>Revisión anual, control de reflejos.</td>
+                        <td>Vitaminas B12 y magnesio.</td>
+                    </tr>
+                    <tr>
+                        <td>Franco Nadal</td>
+                        <td>Dr. Juan Pérez</td>
+                        <td>Cardiología</td>
+                        <td>10/08/2024</td>
+                        <td>Control de presión arterial.</td>
+                        <td>Enalapril 10 mg diario.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<footer class="w3-container w3-tealll w3-center w3-margin-top w3-padding-large">
+    <p>Find me on social media.</p>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+    // Función para cancelar turno (puedes adaptarla para enviar la solicitud al servidor)
+    function cancelarTurno() {
+        alert("Turno cancelado exitosamente.");
+    }
+</script>
+
+<script>
+    function modificarTurno() {
+        alert("Redirigiendo al formulario para modificar el turno.");
+    }
+
+</script>
+</body>
+</html>

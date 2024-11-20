@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reserva</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../styles/reserveStyle.css">
+<script src="../scripts/reservedShifts.js"></script>
+</head>
+
+<body class="w3-light-grey">
+
+
+<header class="w3-container w3-tealll w3-padding-small">
+
+  <div class="w3-half">
+    <img src="../images/isologotipo.png" alt="Isologotipo">
+    <h1 class="w3-text-white">Hospital Nacional Profesor Alejandro Posadas</h1>
+  </div>
+
+  <div class="w3-half">
+    <p class="w3-text-white">
+      <i class="fa fa-user w3-margin-right"></i>Nadal, Franco
+    </p>
+  </div>
+</header>
+
+
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column with Vertical Navigation Bar -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-black w3-card-4 left-container">
+        <div class="w3-bar-block">
+          <a href="#home" class="w3-bar-item w3-button w3-teall">
+              <i class="fa fa-calendar-plus-o fa-fw w3-margin-right"></i> Reservar Turnos
+          </a>
+          <a href="#about" class="w3-bar-item w3-button">
+              <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Próximos Turnos
+          </a>
+          <a href="#services" class="w3-bar-item w3-button">
+              <i class="fa fa-history fa-fw w3-margin-right"></i> Turnos Anteriores
+          </a>
+          <a href="#portfolio" class="w3-bar-item w3-button">
+              <i class="fa fa-calendar-times-o fa-fw w3-margin-right"></i> Cancelar Turno
+          </a>
+        </div>
+      </div><br>
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-twothird">
+      <div class="w3-container w3-text-black w3-card w3-margin-bottom right-container">
+        <h2 class="w3-text-black w3-padding-16"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Formulario de Reserva</h2>
+        
+        <form method="post" action="../view/selectEspecialistView2.html">
+          <!-- Para quién es el turno -->
+          <label for="turnFor">Para quién es el turno:</label>
+          <select id="turnFor" name="turnFor" onchange="toggleFields()">
+            <option value="myself">Para mí</option>
+            <option value="other">Para otro</option>
+          </select>
+
+          <!-- Start two-column layout -->
+          <div class="w3-row">
+            <!-- Column 1 -->
+            <div class="w3-half">
+              <!-- Datos para mí -->
+              <div id="myInfo" style="display: block;">
+                <label>Nombre:</label>
+                <input type="text" value="Franco" readonly>
+                <label>Apellido:</label>
+                <input type="text" value="Nadal" readonly>
+                <label>Número de DNI:</label>
+                <input type="text" value="12345678" readonly>
+              </div>
+
+              <!-- Datos para otro -->
+              <div id="otherInfo" style="display: none;">
+                <label for="otherName">Nombre:</label>
+                <input type="text" id="otherName" name="otherName">
+                <label for="otherLastName">Apellido:</label>
+                <input type="text" id="otherLastName" name="otherLastName">
+                <label for="otherDNI">Número de DNI:</label>
+                <input type="text" id="otherDNI" name="otherDNI">
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="w3-half">
+              <!-- Especialidad médica -->
+              <label for="specialty">Especialidad:</label>
+              <select id="specialty" name="specialty">
+                <option value="general">Medicina General</option>
+                <option value="pediatrics">Pediatría</option>
+                <option value="cardiology">Cardiología</option>
+                <option value="dermatology">Dermatología</option>
+                <option value="neurology">Neurología</option>
+              </select>
+
+              <!-- Fecha -->
+              <label for="date">Fecha:</label>
+              <input type="date" id="date" name="date">
+
+              <!-- Horario -->
+              <label for="time">Horario:</label>
+              <select id="time" name="time">
+                <option value="9:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <!-- End two-column layout -->
+
+          <!-- Botón de reservar turno -->
+          <div class="w3-center" >
+            <button type="submit" class="w3-button  w3-margin" style="background-color: #154564;  border-radius: 10px;  color: white;">Reservar Turno</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-tealll w3-center w3-margin-top w3-padding-large">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>

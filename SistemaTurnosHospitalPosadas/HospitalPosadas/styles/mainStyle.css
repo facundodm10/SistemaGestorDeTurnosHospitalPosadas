@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #56c3ee, #5579b8);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #154564;
+    color: white;
+    padding: 10px;
+}
+
+header img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+header h1 {
+    font-size: 1.5em;
+    display: inline-block;
+    margin: 0;
+}
+header .fa-user {
+    cursor: pointer; /* Cursor pointer para el icono de usuario */
+}
+header .w3-half:last-child {
+    text-align: right;
+}
+
+/* Content styles */
+.content {
+    background-color: #ddd;
+    padding: 20px;
+    flex: 1; /* To push the footer to the bottom */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.w3-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Limita el ancho del box */
+}
+
+/* Button styles */
+button.w3-button-custom {
+    background-color: #154564;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+button.w3-button-custom:hover {
+    background-color: #0d3450; /* Slightly darker shade for hover */
+    cursor: pointer;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #154564;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+footer i {
+    margin: 5px;
+    cursor: pointer;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
