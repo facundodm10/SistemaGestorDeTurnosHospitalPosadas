@@ -61,3 +61,73 @@ header .w3-half:first-child {
 header .w3-half:last-child {
     text-align: right; /* Alinea el texto de la segunda columna a la derecha */
 }
+
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #154564; /* Fondo negro */
+    }
+
+    .footer-left {
+        flex: 1;
+        max-width: 40%;
+    }
+
+    .footer-left h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .footer-left p {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        font-size: 0.9em;
+    }
+
+    .footer-left p i {
+        margin-right: 10px;
+        color: #1c98ed; /* Color azul para los íconos */
+    }
+
+    .footer-map {
+        flex: 1;
+        max-width: 55%;
+    }
+
+    .footer-map iframe {
+        width: 100%;
+        height: 200px; /* Altura fija para el mapa */
+        border: none;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.8em;
+        color: #888;
+        width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .footer-left, .footer-map {
+            max-width: 100%;
+        }
+        .footer-map iframe {
+            height: 250px;
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .h2{
+        color: white;
+    }
+

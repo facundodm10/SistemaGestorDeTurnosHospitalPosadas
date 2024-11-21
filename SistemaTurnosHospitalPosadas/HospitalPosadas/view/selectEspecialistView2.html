@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
+    <title>Seleccionar Especialista</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/reserveStyle.css">
-    <link rel="stylesheet" href="../styles/selectEspecialistStyle.css">
-    <title>Listado de Médicos</title>
+    <script src="../scripts/reservedShifts.js"></script>
+    <style>
+        .especialista-card {
+            margin: 16px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
+        .especialista-card img {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .especialista-card .w3-container {
+            padding: 16px;
+        }
+
+        .especialista-card a {
+            display: block;
+            text-align: center;
+            background-color: #154564;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 16px auto;
+            width: 80%;
+        }
+
+        .especialista-card a:hover {
+            background-color: #123954;
+        }
+    </style>
 </head>
-<body>
+
+<body class="w3-light-grey">
+
 <header class="w3-container w3-tealll w3-padding-small">
 
     <div class="w3-half">
@@ -25,85 +57,111 @@
         </p>
     </div>
 </header>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dr. Juan Pérez</h3>
-    <p class="especialidad">Cardiología</p>
-    <p>Especialista en enfermedades del corazón y sistema circulatorio con más de 10 años de experiencia.</p>
-    <a href="./shiftDetailsView.html">Seleccionar</a>
+
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+        <!-- Left Column with Vertical Navigation Bar -->
+        <div class="w3-third">
+            <div class="w3-white w3-text-black w3-card-4 left-container">
+                <div class="w3-bar-block">
+                    <a href="#home" class="w3-bar-item w3-button">
+                        <i class="fa fa-calendar-plus-o fa-fw w3-margin-right"></i> Reservar Turnos
+                    </a>
+                    <a href="#about" class="w3-bar-item w3-button w3-teall">
+                        <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Próximos Turnos
+                    </a>
+                    <a href="#services" class="w3-bar-item w3-button">
+                        <i class="fa fa-history fa-fw w3-margin-right"></i> Turnos Anteriores
+                    </a>
+                    <a href="#portfolio" class="w3-bar-item w3-button">
+                        <i class="fa fa-calendar-times-o fa-fw w3-margin-right"></i> Cancelar Turno
+                    </a>
+                </div>
+            </div><br>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+            <div class="w3-container w3-text-black w3-card w3-margin-bottom right-container">
+                <h2 class="w3-text-black w3-padding-16"><i class="fa fa-user-md fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Seleccionar Especialista</h2>
+
+                <!-- Barra de progreso -->
+                <div class="w3-light-grey w3-round-large w3-margin-bottom">
+                    <div class="w3-container w3-teal w3-round-large" style="width:66%">2 de 3 pasos</div>
+                </div>
+
+                <!-- Tarjetas de especialistas -->
+                <div class="w3-row-padding">
+
+                    <!-- Especialista 1 -->
+                    <div class="w3-third w3-margin-bottom especialista-card">
+                        <div class="w3-card w3-white">
+                            <img src="../images/especialist1.png" alt="Foto Médico" style="width:100%">
+                            <div class="w3-container">
+                                <h3>Dr. Juan Pérez</h3>
+                                <p class="especialidad">Cardiología</p>
+                                <p>Especialista en enfermedades del corazón y sistema circulatorio con más de 10 años de experiencia.</p>
+                                <a href="./shiftDetailsView.html">Seleccionar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Especialista 2 -->
+                    <div class="w3-third w3-margin-bottom especialista-card">
+                        <div class="w3-card w3-white">
+                            <img src="../images/especialist1.png" alt="Foto Médico" style="width:100%">
+                            <div class="w3-container">
+                                <h3>Dra. María López</h3>
+                                <p class="especialidad">Pediatría</p>
+                                <p>Experta en el cuidado de la salud de niños y adolescentes con 15 años de trayectoria.</p>
+                                <a href="./shiftDetailsView.html">Seleccionar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Especialista 3 -->
+                    <div class="w3-third w3-margin-bottom especialista-card">
+                        <div class="w3-card w3-white">
+                            <img src="../images/especialist1.png" alt="Foto Médico" style="width:100%">
+                            <div class="w3-container">
+                                <h3>Dr. Carlos Gómez</h3>
+                                <p class="especialidad">Dermatología</p>
+                                <p>Especialista en enfermedades de la piel, cabello y uñas con formación avanzada.</p>
+                                <a href="./shiftDetailsView.html">Seleccionar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
 </div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-<div class="card">
-    <img src="../images/especialist1.png" alt="Foto Médico">
-    <h3>Dra. Laura Gómez</h3>
-    <p class="edad">Edad: 48</p>
-    <p class="especialidad">Pediatría</p>
-    <p>Cuida la salud de los niños desde el nacimiento hasta la adolescencia.</p>
-</div>
-</body>
+
 <footer>
-    <p>Find me on social media.</p>
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <!-- Texto e íconos -->
+    <div class="footer-left">
+        <h2 class="h2">CÓMO LLEGAR</h2>
+        <p><i>&#x1F4CD;</i> Florencio Varela 1903 (B1754JEC)</p>
+        <p><i>&#x1F4CD;</i> San Justo, Buenos Aires, Argentina</p>
+        <p><i>&#x260E;</i> (+54 11) 4480-8900</p>
+    </div>
+
+    <!-- Mapa -->
+    <div class="footer-map">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345097466!2d-122.41941508468172!3d37.77492977975995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808581527d5df4a7%3A0x55c55c8a5cddfe78!2sSan%20Francisco%2C%20CA%2C%20EE.%20UU.!5e0!3m2!1ses!2s!4v1636822951942!5m2!1ses!2s"
+                allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
 </footer>
+
+</body>
 </html>
