@@ -1,0 +1,59 @@
+
+body{
+ height: 100%;
+}
+    nav{
+        height: 70px;
+        background-color: #154564;
+    }
+
+    header{
+        height: calc(100vh + 250px);
+    }
+    
+    footer{
+        height: 70px;
+        display: flex;
+    }
+    
+    
+    a{
+        text-decoration: none;
+    }
+    
+    .custom-header {
+        background-color: rgba(21, 69, 100, 0.7);
+    }
+    
+    .color-button {
+        background-color: #1c98ed;
+        color: white;
+        border-radius: 10px;
+        width: 100%;
+    }
+    
+    .color-button:hover {
+        background-color: #1478b7;
+    }
+    
+    
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .color-form {
+        background-color: rgba(2, 33, 53, 0.8);
+        color: white;
+        border-radius: 10px;
+    }
+    
+    
+    footer p{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./registrarseFacundo.css">
+<link rel="stylesheet" href="./navFacundo.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../HospitalPosadas/images/portada.jpg");
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav class="w3-bar w3-card-4">
+    <!-- Left side: Logo and text -->
+    <div class="w3-bar-item w3-left navLetrasBlancas" style="display: flex; height: 100%; align-items: center; justify-content: center;">
+      <img src="../HospitalPosadas/images/logo_posadas.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+      <span style="font-size: x-large" class="w3-hide-small">Hospital Nacional Profesor Alejandro Posadas</span>
+    </div>
+  
+    <!-- Right side: Registrarse -->
+    <div class="w3-right w3-bar-item w3-hide-small w3-hide-medium">
+      <a href="#" class="w3-button navLetrasBlancas">
+        <i class="fa fa-user"></i> Registrarse
+      </a>
+    </div>
+  </nav>
+
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white" style="width: 100%;">
+
+  <!-- Contenedor centrado para el formulario -->
+<div class="form-container" style="width: 100%;">
+  
+    <div class="form-wrapper" style="width: 100%;">
+
+    <form class="w3-container w3-card-4 color-form w3-display-middle w3-hide-small" name="login" method="post" action="./indexFacundo.html" style="width: 400px">
+            <br>
+                <label>Nombre</label>
+                    <input class="w3-input" type="text" placeholder="Nombre completo">
+            <br>
+            <label>Apellido</label>
+                <input class="w3-input" type="text" placeholder="Apellido completo">
+            <br>
+            
+                                    <label>Número de Documento</label>
+                    <input class="w3-input" type="text"placeholder="12232312">
+                    <br>
+            
+                <label>Fecha de nacimiento</label>
+                    <input class="w3-input" type="text" placeholder="DD/MM/YYYY">
+                    <br>
+            
+                <label>Domicilio</label>
+                    <input class="w3-input" type="text">
+                    <br>
+            
+                <label>Número de Celular</label>
+                    <input class="w3-input" type="text">
+                    <br>
+            
+                <label>Contraseña</label>
+                <input class="w3-input" type="password">
+                <br>
+            
+                <label>Repetir Contraseña</label>
+                <input class="w3-input" type="password">
+
+                <div class="button-container">
+                    <br>
+                     <button class="w3-btn color-button">Registrar usuario</button>
+                      <br>
+                      <br>
+            
+        </form>
+
+
+
+        <!-- PANTALLAS ChicAS -->
+        <form class="w3-container w3-card-4 color-form w3-display-middle w3-hide-large w3-show-small w3-hide-medium" name="login" method="post" action="./indexFacundo.html" style="width: 300px">
+            <br>
+                <label>Nombre</label>
+                    <input class="w3-input" type="text" placeholder="Nombre completo">
+            <br>
+            <label>Apellido</label>
+                <input class="w3-input" type="text" placeholder="Apellido completo">
+            <br>
+            
+                                    <label>Número de Documento</label>
+                    <input class="w3-input" type="text"placeholder="12232312">
+                    <br>
+            
+                <label>Fecha de nacimiento</label>
+                    <input class="w3-input" type="text" placeholder="DD/MM/YYYY">
+                    <br>
+            
+                <label>Domicilio</label>
+                    <input class="w3-input" type="text">
+                    <br>
+            
+                <label>Número de Celular</label>
+                    <input class="w3-input" type="text">
+                    <br>
+            
+                <label>Contraseña</label>
+                <input class="w3-input" type="password">
+                <br>
+            
+                <label>Repetir Contraseña</label>
+                <input class="w3-input" type="password">
+
+                <div class="button-container">
+                    <br>
+                     <button class="w3-btn color-button">Registrar usuario</button>
+                      <br>
+                      <br>
+            
+        </form>
+
+</div>
+</div>
+</header>
+
+<!-- Footer -->
+<footer class="w3-center w3-black">
+    <p class="">&copy; 2024 Hospital Nacional Profesor Alejandro Posadas. Todos los derechos reservados.</p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

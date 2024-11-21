@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./reservarFacundo.css">
+<link rel="stylesheet" href="./navFacundo.css">
+<link rel="stylesheet" href="./detalleFacundo.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav class="w3-bar w3-card-4">
+    <!-- Left side: Logo and text -->
+    <div class="w3-bar-item w3-left navLetrasBlancas w3-hover-none" style="display: flex; height: 100%; align-items: center; justify-content: center;">
+      <img src="../HospitalPosadas/images/logo_posadas.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+      <span style="font-size: x-large" class="w3-hide-small">Hospital Nacional Profesor Alejandro Posadas</span>
+    </div>
+  
+    <!-- Right side: Registrarse -->
+    <div class="w3-btn w3-hover-none w3-right color-button w3-hide-small w3-hide-medium navLetrasBlancas" style="display: flex; height: 100%; align-items: center; justify-content: center;">
+        <i class="fa fa-user"></i> &nbsp; Nadal, Franco Quispe
+      
+    </div>
+
+
+    
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-text-white" onclick="w3_open()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Nadal, Franco Quispe</a>
+<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">RESERVAR TURNO</a>
+<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">PRÓXIMOS TURNOS</a>
+<a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">TURNOS ANTERIORES</a>
+<a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">CERRAR SESIÓN</a>
+</nav>
+
+  </nav>
+
+
+
+
+<!-- Header with full-height image -->
+<header class=" w3-display-container w3-grayscale-min" id="home" style="height: calc(100vh - 180px)">
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+        <!-- The Grid -->
+        <div class="w3-row-padding">
+      
+          <!-- Left Column with Vertical Navigation Bar -->
+          <div class="w3-third w3-hide-small">
+            <div class="w3-white w3-text-black w3-card-4 left-container">
+              <div class="w3-bar-block">
+                <a href="#home" class="w3-bar-item w3-button w3-button-active w3-teall">
+                  <i class="fa fa-calendar-plus-o fa-fw w3-margin-right"></i> Reservar Turnos
+                </a>
+                <a href="#about" class="w3-bar-item w3-button">
+                  <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Próximos Turnos
+                </a>
+                <a href="#services" class="w3-bar-item w3-button">
+                  <i class="fa fa-history fa-fw w3-margin-right"></i> Turnos Anteriores
+                </a>
+                <a href="#portfolio" class="w3-bar-item w3-button">
+                  <i class="fa fa-calendar-times-o fa-fw w3-margin-right"></i> Cancelar Turno
+                </a>
+              </div>
+            </div><br>
+          </div>
+      
+          <!-- Right Column -->
+          <div class="w3-twothird">
+            <div class="w3-container w3-text-black w3-card w3-margin-bottom right-container">
+              <h2 class="w3-text-black"><i class="fa fa-user-md fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Detalle del turno</h2>
+      
+              <!-- Barra de progreso -->
+              <div class="w3-light-grey w3-round-large w3-margin-bottom">
+                <div class="w3-container w3-teal w3-round-large" style="width:100%">3 de 3 pasos</div>
+            </div>
+
+            <div class="w3-container w3-display-container">
+                <h3>Turno Seleccionado</h3>
+                <p><strong>Especialista:</strong> Dr. Juan Pérez</p>
+                <p><strong>Especialidad:</strong> Cardiología</p>
+                <p><strong>Fecha:</strong> 15 de diciembre de 2024</p>
+                <p><strong>Hora:</strong> 10:30 AM</p>
+                <p><strong>Consultorio:</strong> N° 305</p>
+            
+                <br>
+                <!-- BOTON PANTALLA GRANDE -->
+            <div class="button-container w3-display-bottommiddle w3-hide-small w3-hide-medium">
+                <button class="w3-button w3-teal w3-round-large" onclick="mostrarModal('modalConfirmar')">Confirmar Turno</button>
+                <button class="w3-button w3-red w3-round-large" onclick="mostrarModal('modalVolver')">Volver Atrás</button>
+            </div>
+
+                <!-- BOTON PANTALLA CHICA yt mediana -->
+                <div class="button-container w3-show-small w3-show-medium w3-hide-large">
+                    <button class="w3-button w3-teal w3-round-large" onclick="mostrarModal('modalConfirmar')">Confirmar Turno</button>
+                    <button class="w3-button w3-red w3-round-large" onclick="mostrarModal('modalVolver')">Volver Atrás</button>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+</div>
+
+ <!-- Modal Volver Atrás -->
+ <div id="modalVolver" class="w3-modal" style="display:none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-opacity w3-round-large">
+        <header class="w3-container w3-red">
+            <span onclick="cerrarModal('modalVolver')" class="w3-button w3-display-topright">&times;</span>
+            <h2>¿Deseas volver hacia atrás?</h2>
+        </header>
+        <div class="w3-container">
+            <p>Perderás los cambios realizados. ¿Estás seguro de que deseas continuar?</p>
+        </div>
+        <footer class="w3-container w3-center w3-red">
+            <button class="w3-button w3-white w3-round-large" onclick="cerrarModal('modalVolver')">Cancelar</button>
+            <button class="w3-button w3-teal w3-round-large" onclick="window.history.back()">Sí, Volver</button>
+        </footer>
+    </div>
+</div>
+
+<!-- Modal Confirmar Turno -->
+<div id="modalConfirmar" class="w3-modal" style="display:none;">
+<div class="w3-modal-content w3-card-4 w3-animate-opacity w3-round-large">
+    <header class="w3-container w3-teal">
+        <span onclick="cerrarModal('modalConfirmar')" class="w3-button w3-display-topright">&times;</span>
+        <h2>Turno Confirmado</h2>
+    </header>
+    <div class="w3-container w3-display-container">
+        <p><strong>Paciente:</strong> Juan Pérez</p>
+        <p><strong>Documento:</strong> DNI 12345678</p>
+        <p><strong>Especialidad:</strong> Medicina General</p>
+        <p><strong>Especialista:</strong> Dr. Carlos García</p>
+        <p><strong>Fecha y Hora:</strong> Lunes, 6 de Enero 2025, 11:50 AM</p>
+     <br>
+
+        <!-- BOTON PANTALLA GRANDE -->
+        <div class="button-container w3-display-bottommiddle w3-hide-small w3-hide-medium">
+            <a href="./ReservarFacundo.html"> <button class="w3-button w3-teal w3-round-large">Reservar otro turno</button></a>
+            <a href="./indexFacundo.html"><button class="w3-button w3-red w3-round-large" onclick="mostrarModal('modalSalir')">Salir</button></a>
+    </div>
+
+  <!-- BOTON PANTALLA CHICA yt mediana -->
+  <div class="button-container w3-show-small w3-show-medium w3-hide-large">
+       <a href="./ReservarFacundo.html"> <button class="w3-button w3-teal w3-round-large">Reservar otro turno</button></a>
+       <a href="./indexFacundo.html"> <button class="w3-button w3-red w3-round-large" onclick="window.location.href='./indexFacundo'">Salir</button></a>
+    </div>
+
+
+
+
+    
+</div>
+    <br>
+
+            </div>
+          </div>
+      
+          <!-- End Grid -->
+        </div>
+      
+        <!-- End Page Container -->
+      </div>
+</header>
+
+<!-- Footer -->
+<footer class="w3-center w3-black">
+    <p class="">&copy; 2024 Hospital Nacional Profesor Alejandro Posadas. Todos los derechos reservados.</p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+
+function mostrarModal(id) {
+        document.getElementById(id).style.display = 'block';
+    }
+
+    function cerrarModal(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
